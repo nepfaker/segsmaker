@@ -140,13 +140,13 @@ def webui_req(U, W, M):
     CD(W)
 
     if U == 'A1111':
-        pull(f"https://github.com/gutris1/segsmaker a1111 {W}")
+        pull(f"https://github.com/nepfaker/segsmaker a1111 {W}")
     elif U == 'Forge':
-        pull(f"https://github.com/gutris1/segsmaker forge {W}")
+        pull(f"https://github.com/nepfaker/segsmaker forge {W}")
     elif U == 'ComfyUI':
-        pull(f"https://github.com/gutris1/segsmaker comfyui {W}")
+        pull(f"https://github.com/nepfaker/segsmaker comfyui {W}")
     elif U == 'ReForge':
-        pull(f"https://github.com/gutris1/segsmaker reforge {W}")
+        pull(f"https://github.com/nepfaker/segsmaker reforge {W}")
     elif U == 'SwarmUI':
         M.mkdir(parents=True, exist_ok=True)
 
@@ -165,10 +165,10 @@ def webui_req(U, W, M):
         subprocess.run(shlex.split(lines), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     scripts = [
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/controlnet.py {W}/asd",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/venv.py {W}",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/Launcher.py {W}",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/segsmaker.py {W}"
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/controlnet.py {W}/asd",
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/venv.py {W}",
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/Launcher.py {W}",
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/segsmaker.py {W}"
     ]
 
     u = M / 'upscale_models' if U in ['ComfyUI', 'SwarmUI'] else M / 'ESRGAN'
@@ -309,9 +309,9 @@ def facetrainer(ui):
             subprocess.run(shlex.split(lines), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
         scripts = [
-            f"https://github.com/gutris1/segsmaker/raw/main/script/SM/venv.py {WEBUI}",
-            f"https://github.com/gutris1/segsmaker/raw/main/script/SM/Launcher.py {WEBUI}",
-            f"https://github.com/gutris1/segsmaker/raw/main/script/SM/segsmaker.py {WEBUI}"
+            f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/venv.py {WEBUI}",
+            f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/Launcher.py {WEBUI}",
+            f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/segsmaker.py {WEBUI}"
         ]
 
         for items in scripts:
@@ -349,13 +349,13 @@ def oppai(btn, sd=None):
                     SyS("git pull origin main")
 
                 x = [
-                    f"https://github.com/gutris1/segsmaker/raw/main/script/SM/venv.py {WEBUI}",
-                    f"https://github.com/gutris1/segsmaker/raw/main/script/SM/Launcher.py {WEBUI}",
-                    f"https://github.com/gutris1/segsmaker/raw/main/script/SM/segsmaker.py {WEBUI}"
+                    f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/venv.py {WEBUI}",
+                    f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/Launcher.py {WEBUI}",
+                    f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/segsmaker.py {WEBUI}"
                 ]
 
                 if ui not in ['SDTrainer', 'FaceFusion']:
-                    x.append(f"https://github.com/gutris1/segsmaker/raw/main/script/SM/controlnet.py {WEBUI}/asd")
+                    x.append(f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/controlnet.py {WEBUI}/asd")
 
                 print()
                 for y in x:
@@ -428,9 +428,9 @@ def go_back(b):
 
 def multi_widgets():
     x = [
-        f"curl -sLo {CSS} https://github.com/gutris1/segsmaker/raw/main/script/SM/setup.css",
-        f"curl -sLo {IMG} https://github.com/gutris1/segsmaker/raw/main/script/SM/loading.png",
-        f"curl -sLo {MRK} https://github.com/gutris1/segsmaker/raw/main/script/SM/marking.py"
+        f"curl -sLo {CSS} https://github.com/nepfaker/segsmaker/raw/main/script/SM/setup.css",
+        f"curl -sLo {IMG} https://github.com/nepfaker/segsmaker/raw/main/script/SM/loading.png",
+        f"curl -sLo {MRK} https://github.com/nepfaker/segsmaker/raw/main/script/SM/marking.py"
     ]
     for y in x:
         SyS(y)
