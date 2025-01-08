@@ -8,7 +8,7 @@ P = "\033[38;5;135m"
 RST = "\033[0m"
 ERR = f"{P}[{RST}{R}ERROR{RST}{P}]{RST}"
 
-IMG = "https://github.com/gutris1/segsmaker/raw/main/script/SM/loading.png"
+IMG = "https://github.com/nepfaker/segsmaker/raw/main/script/SM/loading.png"
 display(Image(url=IMG))
 clear_output(wait=True)
 
@@ -190,13 +190,13 @@ def webui_req(U, W, M):
     CD(W)
 
     if U == 'A1111':
-        pull(f"https://github.com/gutris1/segsmaker a1111 {W}")
+        pull(f"https://github.com/nepfaker/segsmaker a1111 {W}")
     elif U == 'Forge':
-        pull(f"https://github.com/gutris1/segsmaker forge {W}")
+        pull(f"https://github.com/nepfaker/segsmaker forge {W}")
     elif U == 'ComfyUI':
-        pull(f"https://github.com/gutris1/segsmaker comfyui {W}")
+        pull(f"https://github.com/nepfaker/segsmaker comfyui {W}")
     elif U == 'ReForge':
-        pull(f"https://github.com/gutris1/segsmaker reforge {W}")
+        pull(f"https://github.com/nepfaker/segsmaker reforge {W}")
     elif U == 'SwarmUI':
         M.mkdir(parents=True, exist_ok=True)
 
@@ -215,9 +215,9 @@ def webui_req(U, W, M):
         subprocess.run(shlex.split(lines), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     scripts = [
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/controlnet.py {W}/asd",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/KC/venv.py {W}",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/KC/segsmaker.py {W}"
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/SM/controlnet.py {W}/asd",
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/KC/venv.py {W}",
+        f"https://github.com/nepfaker/segsmaker/raw/main/script/KC/segsmaker.py {W}"
     ]
 
     u = M / 'upscale_models' if U in ['ComfyUI', 'SwarmUI'] else M / 'ESRGAN'
@@ -369,11 +369,11 @@ def webui_checker():
 
 def webui_misc():
     z = [
-        (STR / '00-startup.py', f"wget -qO {STR}/00-startup.py https://github.com/gutris1/segsmaker/raw/main/script/KC/00-startup.py"),
-        (pantat, f"wget -qO {pantat} https://github.com/gutris1/segsmaker/raw/main/script/SM/pantat88.py"),
-        (nenen, f"wget -qO {nenen} https://github.com/gutris1/segsmaker/raw/main/script/SM/nenen88.py"),
-        (STR / 'cupang.py', f"wget -qO {STR}/cupang.py https://github.com/gutris1/segsmaker/raw/main/script/SM/cupang.py"),
-        (MRK, f"wget -qO {MRK} https://github.com/gutris1/segsmaker/raw/main/script/SM/marking.py")
+        (STR / '00-startup.py', f"wget -qO {STR}/00-startup.py https://github.com/nepfaker/segsmaker/raw/main/script/KC/00-startup.py"),
+        (pantat, f"wget -qO {pantat} https://github.com/nepfaker/segsmaker/raw/main/script/SM/pantat88.py"),
+        (nenen, f"wget -qO {nenen} https://github.com/nepfaker/segsmaker/raw/main/script/SM/nenen88.py"),
+        (STR / 'cupang.py', f"wget -qO {STR}/cupang.py https://github.com/nepfaker/segsmaker/raw/main/script/SM/cupang.py"),
+        (MRK, f"wget -qO {MRK} https://github.com/nepfaker/segsmaker/raw/main/script/SM/marking.py")
     ]
 
     for x, y in z:
