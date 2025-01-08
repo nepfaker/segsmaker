@@ -397,8 +397,8 @@ def change_key(line):
 
     def key_inject(civitai_key, hf_token):
         x = [
-            f"curl -sLo {pantat} https://github.com/gutris1/segsmaker/raw/main/script/SM/pantat88.py",
-            f"curl -sLo {nenen} https://github.com/gutris1/segsmaker/raw/main/script/SM/nenen88.py"
+            f"curl -sLo {pantat} https://github.com/nepfaker/segsmaker/raw/main/script/SM/pantat88.py",
+            f"curl -sLo {nenen} https://github.com/nepfaker/segsmaker/raw/main/script/SM/nenen88.py"
         ]
 
         for y in x:
