@@ -20,7 +20,7 @@ except ImportError:
 
 SRCN = Path(__file__).parent
 CSSCN = SRCN / "controlnet.css"
-IMG = "https://github.com/gutris1/segsmaker/raw/main/script/SM/loading.png"
+IMG = "https://github.com/nepfaker/segsmaker/raw/main/script/SM/loading.png"
 
 cn15_list = {
     "Openpose": [
@@ -96,93 +96,21 @@ cn15_list = {
 }
 
 cnxl_list = {
-    "Diffusers XL Canny Mid": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors \
-        diffusers_xl_canny_mid.safetensors"],
+    "NoobAI Controlnet Canny SDXL": [
+        "https://huggingface.co/Eugeoter/noob-sdxl-controlnet-canny/resolve/main/noob_sdxl_controlnet_canny.fp16.safetensors \
+        noob_sdxl_controlnet_canny.fp16.safetensors"],
     "Diffusers XL Depth Mid": [
         "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors \
         diffusers_xl_depth_mid.safetensors"],
+    "NoobAI Controlnet OpenPose SDXL": [
+        "https://huggingface.co/Laxhar/noob_openpose/resolve/main/openpose_pre.safetensors \
+        openpose_pre.safetensors"],
         
-    "Kohya Controllite XL Blur": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_blur.safetensors \
-        kohya_controllllite_xl_blur.safetensors"],
-    "Kohya Controllite XL Blur Anime": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_blur_anime.safetensors \
-        kohya_controllllite_xl_blur_anime.safetensors"],
-    "Kohya Controllite XL Canny": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_canny.safetensors \
-        kohya_controllllite_xl_canny.safetensors"],
-    "Kohya Controllite XL Canny Anime": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_canny_anime.safetensors \
-        kohya_controllllite_xl_canny_anime.safetensors"],
-    "Kohya Controllite XL Depth": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_depth.safetensors \
-        kohya_controllllite_xl_depth.safetensors"],
-    "Kohya Controllite XL Depth Anime": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_depth_anime.safetensors \
-        kohya_controllllite_xl_depth_anime.safetensors"],
-    "Kohya Controllite XL Openpose Anime": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_openpose_anime.safetensors \
-        kohya_controllllite_xl_openpose_anime.safetensors"],
-    "Kohya Controllite XL Openpose Anime V2": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_openpose_anime_v2.safetensors \
-        kohya_controllllite_xl_openpose_anime_v2.safetensors"],
-    "Kohya Controllite XL Scribble Anime": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/kohya_controllllite_xl_scribble_anime.safetensors \
-        kohya_controllllite_xl_scribble_anime.safetensors"],
 
-    "T2I Adapter XL Canny": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_xl_canny.safetensors \
-        t2i-adapter_xl_canny.safetensors"],
-    "T2I Adapter XL Openpose": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_xl_openpose.safetensors \
-        t2i-adapter_xl_openpose.safetensors"],
-    "T2I Adapter XL Sketch": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_xl_sketch.safetensors \
-        t2i-adapter_xl_sketch.safetensors"],
-    "T2I Adapter Diffusers XL Canny": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_canny.safetensors \
-        t2i-adapter_diffusers_xl_canny.safetensors"],
-    "T2I Adapter Diffusers XL Depth Midas": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_depth_midas.safetensors \
-        t2i-adapter_diffusers_xl_depth_midas.safetensors"],
-    "T2I Adapter Diffusers XL Depth Zoe": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_depth_zoe.safetensors \
-        t2i-adapter_diffusers_xl_depth_zoe.safetensors"],
-    "T2I Adapter Diffusers XL Lineart": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_lineart.safetensors \
-        t2i-adapter_diffusers_xl_lineart.safetensors"],
-    "T2I Adapter Diffusers XL Openpose": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors \
-        t2i-adapter_diffusers_xl_openpose.safetensors"],
-    "T2I Adapter Diffusers XL Sketch": [
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_sketch.safetensors \
-        t2i-adapter_diffusers_xl_sketch.safetensors"],
-
-    "IP Adapter SDXL": [
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl.safetensors \
-        ip-adapter_sdxl.safetensors"],
-    "IP Adapter SDXL VIT-H": [
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors \
-        ip-adapter_sdxl_vit-h.safetensors"],
-    "IP Adapter Plus SDXL VIT-H": [
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus_sdxl_vit-h.safetensors \
-        ip-adapter-plus_sdxl_vit-h.safetensors"],
-    "IP Adapter Plus Face SDXL VIT-H": [
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter-plus-face_sdxl_vit-h.safetensors \
-        ip-adapter-plus-face_sdxl_vit-h.safetensors"],
     "NoobAI IP Adapter SDXL": [
         "https://huggingface.co/subby2006/noob-ipa/resolve/main/noobIPAMARK1_mark1.safetensors \
         noobIPAMARK1_mark1.safetensors"],
 
-    "IP Adapter FaceID SDXL": [
-        "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl.bin ip-adapter-faceid_sdxl.bin",
-        f"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid_sdxl_lora.safetensors {TMPLORA} \
-        ip-adapter-faceid_sdxl_lora.safetensors"],
-    "IP Adapter FaceID Plusv2 SDXL": [
-        "https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl.bin ip-adapter-faceid-plusv2_sdxl.bin",
-        f"https://huggingface.co/h94/IP-Adapter-FaceID/resolve/main/ip-adapter-faceid-plusv2_sdxl_lora.safetensors {TMPLORA} \
-        ip-adapter-faceid-plusv2_sdxl_lora.safetensors"],
     
     "Instant ID": [
         "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin ip-adapter_instant_id_sdxl.bin",
@@ -324,7 +252,7 @@ def Download(b):
         loading.clear_output()
         os.chdir(HOME)
 
-z = [(CSSCN, f"curl -sLo {CSSCN} https://github.com/gutris1/segsmaker/raw/main/script/SM/controlnet.css")]
+z = [(CSSCN, f"curl -sLo {CSSCN} https://github.com/nepfaker/segsmaker/raw/main/script/SM/controlnet.css")]
 for x, y in z:
     if not SM:
         if not Path(x).exists():
